@@ -2,7 +2,9 @@
     <section class="sect-jeremias"></section>
     <section class="sect-factsheet"></section>
     <section class="sect-projects"></section>
-    <section class="sect-contact"></section>
+    <section class="sect-contact">
+      <span>Taegliches Update - jeweils um 0:00!</span>
+    </section>
 </template>
 
 <script>
@@ -27,5 +29,13 @@
 }
 .sect-contact{
   background-color: white;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.sect-contact span{
+  text-align: center;
+  color: black;
+  font-size: 30px;
 }
 </style>
