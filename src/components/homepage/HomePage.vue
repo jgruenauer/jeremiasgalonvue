@@ -3,7 +3,7 @@
     <section class="sect-factsheet"></section>
     <section class="sect-projects"></section>
     <section class="sect-contact">
-      <span>Taegliches Update - jeweils um 0:00!</span>
+      <span>(Fast) Taegliches Update - jeweils um 0:00!</span>
     </section>
 </template>
 
