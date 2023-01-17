@@ -1,23 +1,22 @@
-<template>
-  <header><MenuBar></MenuBar></header>
-  <HomePage></HomePage>
-  
-  <footer></footer>
-</template>
-
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
-import HomePage from './components/homepage/HomePage.vue';
+/* import BlogPage from './components/blog/BlogPage.vue';
+import HomePage from './components/homepage/HomePage.vue'; */
 import MenuBar from './components/menu/MenuBar.vue';
 
 export default {
   name: 'App',
   components: {
-    MenuBar,
-    HomePage
-}
+    MenuBar
+  }
 }
 </script>
+
+<template>
+  <header><MenuBar></MenuBar></header>
+  <router-view></router-view>
+  <footer></footer>
+</template>
 
 <style>
 #app {

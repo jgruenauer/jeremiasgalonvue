@@ -2,13 +2,13 @@
     <div class="menuBar">  
         <div class="menuItembox">
             <div class="menuItem">
-                <span class="menuTitle">Kontakt</span>
+                <router-link class="menuTitle" to="/">Kontakt</router-link>
             </div>
             <div class="menuItem">
-                <img class="menuLogo" src="./../../assets/Signature_White.png"/>
+                <router-link to="/"><img class="menuLogo" src="./../../assets/Signature_White.png"/></router-link>
             </div>
             <div class="menuItem">
-                <span class="menuTitle">Blog</span>
+                <router-link class="menuTitle" to="/blog">Blog</router-link>
             </div>
         </div>      
     </div>
@@ -65,5 +65,10 @@ export default{
 
 .menuTitle{
     transform: translate(0px, -12px);
+    color: white;
+}
+
+.menuTitle:hover{
+    color: #fff000;
 }
 </style>
