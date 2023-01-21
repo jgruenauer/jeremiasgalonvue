@@ -1,14 +1,22 @@
 <template>
     <div>
-        <span>temporary - future block overview</span>
+        <router-view v-slot="{route}">
+            <BlogOverview v-if="route.name === 'blog'"></BlogOverview>
+        </router-view>
+        <router-view style="background-color: white"></router-view>
     </div>
     
 </template>
 
 <script>
+import BlogOverview from './BlogOverview.vue';
+
+    
+
     export default{
-        name: 'BlogPage'
-    }
+    name: "BlogPage",
+    components: { BlogOverview }
+}
 </script>
 
 <style scoped>

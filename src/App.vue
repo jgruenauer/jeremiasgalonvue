@@ -7,7 +7,7 @@ import MenuBar from './components/menu/MenuBar.vue';
 export default {
   name: 'App',
   components: {
-    MenuBar
+    MenuBar,
   }
 }
 </script>
