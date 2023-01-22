@@ -2,11 +2,43 @@
     "blogposts" : [
         {
             "id" : "test1",
-            "date" : "2023-01-21"
+            "date" : "2023-01-21",
+            "picture" : "'@/markdowns/thumbnails/testbild.png'"
         },
         {
             "id" : "test2",
-            "date" : "2023-01-20"
+            "date" : "2023-01-20",
+            "picture" : "'@/markdowns/thumbnails/testbild.png'"
+        },
+        {
+            "id" : "test8",
+            "date" : "2023-01-20",
+            "picture" : "'@/markdowns/thumbnails/testbild.png'"
+        },
+        {
+            "id" : "test3",
+            "date" : "2023-01-20",
+            "picture" : "'@/markdowns/thumbnails/testbild.png'"
+        },
+        {
+            "id" : "test4",
+            "date" : "2023-01-20",
+            "picture" : "'@/markdowns/thumbnails/testbild.png'"
+        },
+        {
+            "id" : "test5",
+            "date" : "2023-01-20",
+            "picture" : "'@/markdowns/thumbnails/testbild.png'"
+        },
+        {
+            "id" : "test6",
+            "date" : "2023-01-20",
+            "picture" : "'@/markdowns/thumbnails/testbild.png'"
+        },
+        {
+            "id" : "test7",
+            "date" : "2023-01-20",
+            "picture" : "'@/markdowns/thumbnails/testbild.png'"
         }
     ]
 }

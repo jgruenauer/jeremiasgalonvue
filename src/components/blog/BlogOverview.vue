@@ -1,6 +1,6 @@
 <template>
     <div class="blogoverview">
-        <div class="blogentry" v-for="post in posts" :key="post.id">
+        <div class="blogentry" v-for="post in posts" :key="post.id" :style="{ backgroundImage: 'url(' + post.picture + ')' }"> 
             <h1 class="blogpost-header" @click="$router.push({path: '/blog/' + post.id})">{{ post.id }}</h1>
             <p class="blogpost-date">{{ post.date }}</p>
         </div>
@@ -27,11 +27,11 @@
     .blogoverview{
         display: flex;
         justify-content: center;
-        flex-direction: column;
         align-items: center;
     }
     .blogentry{
-        width: 70%;
+        width: 400px;
+        height: 250px;
         display: flex;
         justify-content: center;
         flex-direction: column;
