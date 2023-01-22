@@ -15,7 +15,9 @@ export default {
 <template>
   <header><MenuBar></MenuBar></header>
   <router-view></router-view>
-  <footer></footer>
+  <footer><p>
+    Test
+  </p></footer>
 </template>
 
 <style>
