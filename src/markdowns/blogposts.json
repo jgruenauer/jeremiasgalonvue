@@ -3,42 +3,42 @@
         {
             "id" : "test1",
             "date" : "2023-01-21",
-            "picture" : "'@/markdowns/thumbnails/testbild.png'"
+            "picture" : "@/markdowns/thumbnails/testbild.png"
         },
         {
             "id" : "test2",
             "date" : "2023-01-20",
-            "picture" : "'@/markdowns/thumbnails/testbild.png'"
+            "picture" : "src/markdowns/thumbnails/testbild.png"
         },
         {
             "id" : "test8",
             "date" : "2023-01-20",
-            "picture" : "'@/markdowns/thumbnails/testbild.png'"
+            "picture" : "C:/User/jerem/Jeremias/ITPROJ/jeremiasgalonvue/src/markdowns/thumbnails/testbild.png"
         },
         {
             "id" : "test3",
             "date" : "2023-01-20",
-            "picture" : "'@/markdowns/thumbnails/testbild.png'"
+            "picture" : "@/markdowns/thumbnails/testbild.png"
         },
         {
             "id" : "test4",
             "date" : "2023-01-20",
-            "picture" : "'@/markdowns/thumbnails/testbild.png'"
+            "picture" : "@/markdowns/thumbnails/testbild.png"
         },
         {
             "id" : "test5",
             "date" : "2023-01-20",
-            "picture" : "'@/markdowns/thumbnails/testbild.png'"
+            "picture" : "@/markdowns/thumbnails/testbild.png"
         },
         {
             "id" : "test6",
             "date" : "2023-01-20",
-            "picture" : "'@/markdowns/thumbnails/testbild.png'"
+            "picture" : "@/markdowns/thumbnails/testbild.png"
         },
         {
             "id" : "test7",
             "date" : "2023-01-20",
-            "picture" : "'@/markdowns/thumbnails/testbild.png'"
+            "picture" : "@/markdowns/thumbnails/testbild.png"
         }
     ]
 }
