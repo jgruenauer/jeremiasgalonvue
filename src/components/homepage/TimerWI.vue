@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="timer-wi">
         <span>Time Without incident:</span>
         <span class="timer-display">{{ formattedTime }}</span>
     </div>
@@ -54,12 +54,22 @@ export default {
 </script>
   
 <style>
+    .timer-wi{
+        position: relative;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     span{
         color: white;
         margin: 0px 20px;
+        font-size: 20px; 
     }
 
     .timer-display{
-       font-size: 30px; 
+       font-size: 80px; 
     }
 </style>

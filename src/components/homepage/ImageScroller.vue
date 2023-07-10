@@ -19,7 +19,7 @@ export default {
             translateX: 0,
             hovered: false,
             hoverSpeed: 2,
-      slowSpeed: 5,
+      slowSpeed: 1,
       animationId: null
     };
   },
@@ -63,11 +63,16 @@ export default {
 <style>
 .image-scroll {
   width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   overflow: hidden;
 }
 
 .scroll-container {
   white-space: nowrap;
+  height: 100%;
 }
 
 .scroll-container.hovered {
@@ -76,10 +81,12 @@ export default {
 
 .images {
   display: inline-block;
+  height: 100%;
 }
 
 img {
   display: inline-block;
-    height: 80vh;
+  height: 100%;
+
 }
 </style>

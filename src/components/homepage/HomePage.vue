@@ -5,7 +5,6 @@
     </section>
   
   <section class="sect-factsheet">
-      <TimerWI></TimerWI>
     </section>
     <section class="sect-projects">
       
@@ -36,12 +35,12 @@
   background-repeat: no-repeat;
   background-size: contain;
   */
-  height: 100vh;
+  height: calc(100vh - 100px);
   margin-bottom: 0;
 
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  /*display: flex;
+  flex-direction: column;*/
+  position: relative;
 }
 
 
