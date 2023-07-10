@@ -1,0 +1,83 @@
+<template>
+    <div class="image-scroll" @mouseover="handleMouseOver" @mouseleave="handleMouseLeave">
+        <div class="scroll-container" :style="{ transitionDuration: transitionDuration + 's' }">
+            <div class="images" ref="images" :style="{ transform: `translateX(${translateX}px)` }">
+                <img v-for="(image, index) in extendedImages" :src="image" :key="index" alt="Image" />
+            </div>
+        </div>
+    </div>
+</template>
+          
+<script>
+export default {
+    data() {
+        return {
+            name: "ImageScroller",
+            images: [
+                require('./jeremiasgalon-webpage-banner-cut.png'),
+            ],
+            translateX: 0,
+            hovered: false,
+            hoverSpeed: 2,
+      slowSpeed: 1,
+      animationId: null
+    };
+  },
+  computed: {
+    extendedImages() {
+      // Duplicate the images array to create a continuous loop
+      return [...this.images, ...this.images];
+    }
+  },
+  methods: {
+    animate() {
+      this.translateX -= this.hovered ? this.hoverSpeed : this.slowSpeed;
+
+      const containerWidth = this.$refs.images.offsetWidth;
+
+      // Check if scrolled beyond the total width of the images
+      if (Math.abs(this.translateX) >= containerWidth) {
+        this.translateX = 0;
+      }
+
+      this.animationId = requestAnimationFrame(this.animate);
+    },
+    handleMouseOver() {
+      this.hovered = true;
+    },
+    handleMouseLeave() {
+      this.hovered = false;
+    }
+  },
+  mounted() {
+    this.animationId = requestAnimationFrame(this.animate);
+  },
+  beforeUnmount() {
+    cancelAnimationFrame(this.animationId);
+  }
+};
+</script>
+
+<style>
+.image-scroll {
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroll-container {
+  white-space: nowrap;
+}
+
+.scroll-container.hovered {
+  transition: transform 0.2s ease-in-out;
+}
+
+.images {
+  display: inline-block;
+}
+
+img {
+  display: inline-block;
+    height: 80vh;
+}
+</style>

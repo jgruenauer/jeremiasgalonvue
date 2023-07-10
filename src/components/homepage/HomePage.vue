@@ -1,18 +1,28 @@
 <template>
     <section class="sect-jeremias">
-      <span>(Fast) Taegliches Update - jeweils um 0:00!</span>
+      <TimerWI></TimerWI>
+      <ImageScroller></ImageScroller>
     </section>
-    <section class="sect-factsheet"></section>
-    <section class="sect-projects"></section>
+  
+  <section class="sect-factsheet">
+      <TimerWI></TimerWI>
+    </section>
+    <section class="sect-projects">
+      
+    </section>
     <section class="sect-contact">
       
     </section>
 </template>
 
 <script>
+  import TimerWI from './TimerWI.vue';
+  import ImageScroller from './ImageScroller.vue';
+
     export default{
-        name: "HomePage"
-    }
+    name: "HomePage",
+    components: { TimerWI, ImageScroller }
+}
 </script>
 
 <style>
@@ -20,25 +30,29 @@
   height: 200px;
 }
 .sect-jeremias{
+  /*
   background-image: url('./../../assets/ichviel.png');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: contain;
+  */
   height: 100vh;
+  margin-bottom: 0;
 
   align-items: center;
   display: flex;
   justify-content: center;
 }
-.sect-jeremias span{
-  text-align: center;
-  color: white;
-  font-size: 30px;
-}
+
 
 .sect-factsheet{
   background-color: white;
 }
+
+.sect-projects{
+  height: fit-content;
+}
+
 .sect-contact{
   background-color: white;
   

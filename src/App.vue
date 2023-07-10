@@ -15,9 +15,9 @@ export default {
 <template>
   <header><MenuBar></MenuBar></header>
   <router-view></router-view>
-  <footer><p>
-    Test
-  </p></footer>
+  <footer>
+    <span>(Fast) Taegliches Update - jeweils um 0:00!</span>
+  </footer>
 </template>
 
 <style>
@@ -25,6 +25,15 @@ export default {
   background-color: black;
   
   font-family: 'Oswald';
+}
+footer{
+  display: grid;
+}
+
+footer span{
+  text-align: center;
+  color: white;
+  font-size: 20px;
 }
 </style>
 

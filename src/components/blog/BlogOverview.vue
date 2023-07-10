@@ -1,7 +1,7 @@
 <template>
     <div class="blogoverview">
         <div class="blogentry" v-for="post in posts" :key="post.id" :style="{ backgroundImage: 'url(' + post.picture + ')' }"> 
-            <img :src="require(post.picture)" width="500" height="500">
+            <!--<img :src="require(post.picture)" width="500" height="500">-->
             <h1 class="blogpost-header" @click="$router.push({path: '/blog/' + post.id})">{{ post.id }}</h1>
             <p class="blogpost-date">{{ post.date }}</p>
         </div>
