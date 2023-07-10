@@ -14,29 +14,31 @@ export default {
         return {
             name: "ImageScroller",
             images: [
-                require('./jeremiasgalon-webpage-banner-cut.png'),
+                require('./jeremiasgalon-webpage-banner-cut.webp'),
             ],
             translateX: 0,
             hovered: false,
             hoverSpeed: 2,
-      slowSpeed: 1,
+      slowSpeed: 5,
       animationId: null
     };
   },
   computed: {
     extendedImages() {
       // Duplicate the images array to create a continuous loop
+      // future usability may require to check if two images are enough!
       return [...this.images, ...this.images];
     }
   },
   methods: {
+    
     animate() {
       this.translateX -= this.hovered ? this.hoverSpeed : this.slowSpeed;
 
       const containerWidth = this.$refs.images.offsetWidth;
 
       // Check if scrolled beyond the total width of the images
-      if (Math.abs(this.translateX) >= containerWidth) {
+      if (Math.abs(this.translateX) >= containerWidth/2) {
         this.translateX = 0;
       }
 
