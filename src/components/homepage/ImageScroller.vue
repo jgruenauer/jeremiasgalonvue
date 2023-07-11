@@ -37,12 +37,14 @@ export default {
 
             const containerWidth = this.$refs.images.offsetWidth;
 
-            // Check if scrolled beyond the total width of the images
+                // Check if scrolled beyond the total width of the images
             if (Math.abs(this.translateX) >= containerWidth / 2) {
                 this.translateX = 0;
             }
 
             this.animationId = requestAnimationFrame(this.animate);
+            }
+            
         },
         handleMouseOver() {
             this.hovered = true;
