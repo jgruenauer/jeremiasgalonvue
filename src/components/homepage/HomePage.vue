@@ -49,7 +49,7 @@
 }
 
 .sect-projects{
-  height: fit-content;
+
 }
 
 .sect-contact{

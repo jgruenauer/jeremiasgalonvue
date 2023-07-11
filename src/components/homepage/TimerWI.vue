@@ -1,13 +1,19 @@
 <template>
     <div class="timer-wi">
-        <span>Time Without incident:</span>
+        <div>
+            <span>Time Without incident:</span>
+            <Icon class="info-icon" icon="fluent:info-16-filled" @mouseover="mouseOverIcon"/>
+        </div>
         <span class="timer-display">{{ formattedTime }}</span>
     </div>
 </template>
   
 <script>
+import { Icon } from '@iconify/vue';
+
 export default {
     data() {
+
         return {
             name: "TimerWI",
             startTime: null,
@@ -42,6 +48,9 @@ export default {
         },
         stopTimerWI() {
             clearInterval(this.intervalId);
+        },
+        mouseOverIcon(){
+            console.log("works");
         }
     },
     mounted() {
@@ -49,27 +58,34 @@ export default {
     },
     beforeUnmount() {
         this.stopTimerWI();
-    }
+    },
+    components: {
+        Icon,
+    },
 };
 </script>
   
 <style>
-    .timer-wi{
-        position: relative;
-        height: 30%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+.timer-wi {
+    position: relative;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-    span{
-        color: white;
-        margin: 0px 20px;
-        font-size: 20px; 
-    }
+span {
+    color: white;
+    font-size: 20px;
+}
 
-    .timer-display{
-       font-size: 80px; 
-    }
+.timer-display {
+    font-size: 80px;
+}
+
+.info-icon{
+    position: absolute;
+    color: white;
+}
 </style>

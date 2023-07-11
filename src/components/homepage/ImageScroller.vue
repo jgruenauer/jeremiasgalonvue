@@ -43,8 +43,7 @@ export default {
             }
 
             this.animationId = requestAnimationFrame(this.animate);
-            }
-            
+                       
         },
         handleMouseOver() {
             this.hovered = true;
