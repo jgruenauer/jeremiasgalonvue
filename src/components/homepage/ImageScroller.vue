@@ -20,7 +20,8 @@ export default {
             hovered: false,
             hoverSpeed: 2,
             slowSpeed: 1,
-            animationId: null
+            animationId: null,
+            transitionDuration: 1
         };
     },
     computed: {
@@ -69,6 +70,7 @@ export default {
     top: 0;
     left: 0;
     overflow: hidden;
+    pointer-events: none;
 }
 
 .scroll-container {
