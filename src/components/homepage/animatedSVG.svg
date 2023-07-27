@@ -1,0 +1,22 @@
+<svg width="300" height="100" xmlns="http://www.w3.org/2000/svg">
+  <path id="letterA" d="M10 50 L30 10 L50 50 Z" fill="none" stroke="black">
+    <animate
+      attributeName="d"
+      from="M10 50 L30 10 L50 50 Z"
+      to="M10 50 L30 10 L50 50 Z"
+      begin="0s"
+      dur="1s"
+      fill="freeze"
+      repeatCount="1"
+    />
+    <animate
+      attributeName="d"
+      from="M10 50 L30 10 L50 50 Z"
+      to="M10 50 L30 10 L70 50 Z"
+      begin="1s"
+      dur="1s"
+      fill="freeze"
+      repeatCount="1"
+    />
+  </path>
+</svg>

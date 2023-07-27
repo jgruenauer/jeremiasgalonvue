@@ -5,13 +5,19 @@
   </section>
 
   <section class="sect-factsheet">
+    <FactsheetSection></FactsheetSection>
+    
+    
+    <!--hotpot.ai/art-generator-->
   </section>
-  <section class="sect-projects">
+  <section class="sect-projects" >
+    
   </section>
   <section class="sect-timer">
     <p>Ah du fragst dich was der Timer für einen Sinn macht (futur)?</p>
-    <p>Der Timer steht für eine monatliche Challenge. Diese reicht von Netflix-Entzug, über jeden Tag Sport, bis zu NNN. Und du kannst live mitverfolgen, wie lange ich es bereits ohne Fehltritt schaffe.</p>
-    <img src="./red-button.webp" style="height: 100px;"/>
+    <p>Der Timer steht für eine monatliche Challenge. Diese reicht von Netflix-Entzug, über jeden Tag Sport, bis zu NNN.
+      Und du kannst live mitverfolgen, wie lange ich es bereits ohne Fehltritt schaffe.</p>
+    <img src="./red-button.webp" style="height: 100px;" />
     <p>Coming "soon"</p>
     <p>Nimm an der Challenge Teil, besieg mich und zeig der Welt wie lange du dabei ist.</p>
     <button>Sign up</button>
@@ -27,16 +33,20 @@
 <script>
 import TimerWI from './sect-jeremias/TimerWI.vue';
 import ImageScroller from './sect-jeremias/ImageScroller.vue';
+import FactsheetSection from './sect-factsheet/FactsheetSection.vue';
+
 
 export default {
   name: "HomePage",
-  components: { TimerWI, ImageScroller }
+  components: { TimerWI, ImageScroller, FactsheetSection }
 }
 </script>
 
 <style>
+
+
 section {
-  height: 200px;
+  height: 100vh;
 }
 
 .sect-jeremias {
@@ -59,9 +69,7 @@ section {
   background-color: white;
 }
 
-.sect-projects {
-
-}
+.sect-projects {}
 
 .sect-timer {
   background-color: white;
