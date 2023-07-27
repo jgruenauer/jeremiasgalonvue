@@ -67,6 +67,10 @@ section {
 
 .sect-factsheet {
   background-color: white;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
 }
 
 .sect-projects {}
