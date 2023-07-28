@@ -11,7 +11,8 @@
     <!--hotpot.ai/art-generator-->
   </section>
   <section class="sect-projects" >
-    
+    <h1>Projekte</h1>
+    <ProjectsOverview></ProjectsOverview>
   </section>
   <section class="sect-timer">
     <p>Ah du fragst dich was der Timer für einen Sinn macht (futur)?</p>
@@ -34,11 +35,11 @@
 import TimerWI from './sect-jeremias/TimerWI.vue';
 import ImageScroller from './sect-jeremias/ImageScroller.vue';
 import FactsheetSection from './sect-factsheet/FactsheetSection.vue';
-
+import ProjectsOverview from './sect-projects/ProjectsOverview.vue';
 
 export default {
   name: "HomePage",
-  components: { TimerWI, ImageScroller, FactsheetSection }
+  components: { TimerWI, ImageScroller, FactsheetSection, ProjectsOverview }
 }
 </script>
 
@@ -73,7 +74,12 @@ section {
   padding: 50px 0;
 }
 
-.sect-projects {}
+.sect-projects {
+  color: white;
+  text-align: center;
+  height: fit-content;
+  padding: 20px 0px;
+}
 
 .sect-timer {
   background-color: white;
