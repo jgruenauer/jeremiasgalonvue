@@ -36,14 +36,49 @@
       </div>
     </div>
     <div class="right" style="height: 100vh;">
-      <img src="./../../../assets/tubetv_trans.png" style="height: 400px;" />
+      <img :src="defaultImageSrc" style="height: 400px;" />
     </div>
   </div>
 </template>
   
 <script>
 export default {
-
+  name: "FactsheetSection",
+  data() {
+    return {
+      defaultImageSrc: require('./../../../assets/tubetv_trans.png'),
+    };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  unmounted() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      var viewPortHeight = window.innerHeight;
+      //console.log(window.scrollY);
+      if (window.scrollY < viewPortHeight*1.7) {
+        return(this.defaultImageSrc = require('./../../../assets/tubetv_trans.png'));
+      }
+      if (window.scrollY >= viewPortHeight*1.7 && window.scrollY < viewPortHeight*2.6) {
+        return(this.defaultImageSrc = require('./../../../assets/tubetv_ambulance.png'));
+      }
+      if (window.scrollY >= viewPortHeight*2.6 && window.scrollY < viewPortHeight*2.7) {
+        return(this.defaultImageSrc = require('./../../../assets/tubetv_ambulance_transition.png'));
+      }
+      if (window.scrollY >= viewPortHeight*2.7 && window.scrollY < viewPortHeight*3.6) {
+        return(this.defaultImageSrc = require('./../../../assets/tubetv_htl.png'));
+      }
+      if (window.scrollY >= viewPortHeight*3.6 && window.scrollY < viewPortHeight*3.7) {
+        return(this.defaultImageSrc = require('./../../../assets/tubetv_htl_transition.png'));
+      }
+      if (window.scrollY >= viewPortHeight*3.7) {
+        return(this.defaultImageSrc = require('./../../../assets/tubetv_kindergarten.png'));
+      }
+    }
+  }
 };
 </script>
   
