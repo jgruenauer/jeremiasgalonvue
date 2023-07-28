@@ -1,46 +1,65 @@
 <template>
-<div class="container">
-      <img class="project-card" src="https://images.unsplash.com/photo-1569390173732-5c735072c80f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
-      <img class="project-card" src="https://images.unsplash.com/photo-1582842195329-6a0baffd2a39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
-      <img class="project-card" src="https://images.unsplash.com/photo-1600722230999-22c256d38cb7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+  <div class="project-card">
+    <img class="project-image" :src="imageSrc" :alt="cardTitle"/>
+    <div class="project-description">
+      <p>{{ cardDescription }}</p>
     </div>
-  </template>
+  </div>
+</template>
   
-  <script>
-  export default{
-
+<script>
+export default {
+  name: "ProjectCard",
+  props:{
+    imageSrc: String,
+    cardTitle: String,
+    cardDescription: String
   }
-  </script>
+}
+</script>
   
 <style>
 .project-card {
-  width: 30%;
-  height: 100%;
+  height: 300px;
+  width: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
   object-fit:cover;
   
   -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);
   
   transform-origin:center;
-  transform:perspective(800px) rotateY(25deg);
+  transform:perspective(800px) rotateY(20deg);
   transition:0.5s;
+
 }
-.container {
-  max-width:600px;
-  max-height:350px;
-  
-  
-  
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:20px;
-  
+
+.project-title {
+  position: absolute;
+
 }
-.container:hover img {
-  opacity:0.3;
+
+.project-image {}
+
+.project-description {
+  position: absolute;
+  align-self: end;
+  color: black;
+  transform: translateY(+100%);
+  transition: transform 0.5s ease-out;
+  background-color: white;
+  width: 100%;
+  height: 30%;
+
+
 }
-.container img:hover {
-  transform:perspective(800px)       rotateY(0deg);
-  opacity:1;
+
+.project-card:hover .project-description {
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
 }
 </style>

@@ -6,12 +6,15 @@
 
   <section class="sect-factsheet">
     <FactsheetSection></FactsheetSection>
-    
-    
+
+
     <!--hotpot.ai/art-generator-->
   </section>
-  <section class="sect-projects" >
-    <h1>Projekte</h1>
+  <section class="sect-projects">
+    <h1 class="section-heading">EIGENE PROJEKTE</h1>
+    <p class="section-paragraph" style="margin-bottom: 50px;">Hier ist ein Auszug einiger Projekte, an denen ich mich in der Vergangenheit ausgelebt habe. Stöber gern ein
+      bisschen hinein, finde heraus welche Herausforderungen es zu bewältigen galt hat und wie das Endergebnis
+      aussah!</p>
     <ProjectsOverview></ProjectsOverview>
   </section>
   <section class="sect-timer">
@@ -44,8 +47,6 @@ export default {
 </script>
 
 <style>
-
-
 section {
   height: 100vh;
 }
@@ -78,7 +79,12 @@ section {
   color: white;
   text-align: center;
   height: fit-content;
-  padding: 20px 0px;
+  padding: 50px 0px 70px 0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .sect-timer {
@@ -105,5 +111,16 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.section-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 80px;
+}
+
+.section-paragraph {
+  margin: 0;
+  width: 50%
 }
 </style>

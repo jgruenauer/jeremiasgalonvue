@@ -1,84 +1,67 @@
 <template>
     <div class="project-cards-container">
-        <div class="project-card">
-            <h2 class="project-title">Diplom</h2>
-            <img class="project-image" src="./../../../assets/image2.jpg" />
-            <div class="project-description">
-                <p >Kurzer Beschreibungs-Kontent</p>
-            </div>
-            
-        </div>
-        <div class="project-card">
-            <h2 class="project-title">Diplom</h2>
-            <img class="project-image" src="./../../../assets/image1.jpg" />
-            <div class="project-description">
-                <p >Kurzer Beschreibungs-Kontent</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <h2 class="project-title">Diplom</h2>
-            <img class="project-image" src="./../../../assets/image3.jpg" />
-            <div class="project-description">
-                <p >Kurzer Beschreibungs-Kontent</p>
-            </div>
-        </div>
+        <ProjectCard class="card-container" v-for="(card, index) in cards" :key="index" :imageSrc="card.imageSrc"
+            :cardTitle="card.cardTitle" :cardDescription="card.cardDescription"></ProjectCard>
     </div>
 </template>
   
 <script>
-
+import ProjectCard from "./ProjectCard.vue";
 
 export default {
+
+
     data() {
         return {
             cards: [
                 {
-                    thumbnail: 'path/to/thumbnail1.png',
-                    cardTitle: 'Card 1',
+                    imageSrc: require('./../../../assets/project-diplomarbeit-1.png'),
+                    cardTitle: 'Diplomarbeit',
                     cardDescription: 'Description for Card 1',
-                }
+                },
+                {
+                    imageSrc: require('./../../../assets/project-music.jpg'),
+                    cardTitle: 'Eigene Musik',
+                    cardDescription: 'Description for Card 2',
+                },
+                {
+                    imageSrc: require('./../../../assets/project-protfolio.png'),
+                    cardTitle: 'Portfolio Website',
+                    cardDescription: 'Description for Card 3',
+                },
                 // Add more cards here, up to 10 in total
             ],
         };
     },
+    components: {
+        ProjectCard
+    },
+    methods: {
+        onMouseOver: function () {
+
+        }
+    }
 };
 </script>
   
 <style>
 .project-cards-container {
-    height: fit-ccontent;
-    display: grid;
-    column-gap: 20px;
-    grid-template-columns: auto auto auto;
-    justify-content: center;
-}
-
-.project-card {
-    height: 300px;
-    width: 200px;
-    position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
-    overflow: hidden;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+    height: fit-content;
 }
 
-.project-title {
-    position: absolute;
-
+.project-cards-container:hover .card-container {
+    opacity: 0.3;
 }
 
-.project-image {
-}
-
-.project-description{
-    position: absolute;
-    align-self: end;
-    color: white;
-    transition: transform 0.5s ease-out;
-
-
-
+.card-container:hover {
+    cursor: pointer;
+    transform: perspective(800px) rotateY(0deg);
+    opacity: 1 !important;
 }
 </style>
   
