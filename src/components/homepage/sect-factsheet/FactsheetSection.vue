@@ -1,4 +1,4 @@
-  <!--<img src="./../../../assets/tubetv_trans.png" style="height: 400px;"/>-->
+  <!--<img src="./../../../assets/tubetv_trans.webp" style="height: 400px;"/>-->
 <template>
   <div class="sticky-scroll-container">
     <div class="left">
@@ -46,7 +46,7 @@ export default {
   name: "FactsheetSection",
   data() {
     return {
-      defaultImageSrc: require('./../../../assets/tubetv_trans.png'),
+      defaultImageSrc: require('./../../../assets/tubetv_trans.webp'),
     };
   },
   mounted() {
@@ -60,22 +60,22 @@ export default {
       var viewPortHeight = window.innerHeight;
       //console.log(window.scrollY);
       if (window.scrollY < viewPortHeight*1.7) {
-        return(this.defaultImageSrc = require('./../../../assets/tubetv_trans.png'));
+        return(this.defaultImageSrc = require('./../../../assets/tubetv_trans.webp'));
       }
       if (window.scrollY >= viewPortHeight*1.7 && window.scrollY < viewPortHeight*2.6) {
-        return(this.defaultImageSrc = require('./../../../assets/tubetv_ambulance.png'));
+        return(this.defaultImageSrc = require('./../../../assets/tubetv_ambulance.webp'));
       }
       if (window.scrollY >= viewPortHeight*2.6 && window.scrollY < viewPortHeight*2.7) {
-        return(this.defaultImageSrc = require('./../../../assets/tubetv_ambulance_transition.png'));
+        return(this.defaultImageSrc = require('./../../../assets/tubetv_ambulance_transition.webp'));
       }
       if (window.scrollY >= viewPortHeight*2.7 && window.scrollY < viewPortHeight*3.6) {
-        return(this.defaultImageSrc = require('./../../../assets/tubetv_htl.png'));
+        return(this.defaultImageSrc = require('./../../../assets/tubetv_htl.webp'));
       }
       if (window.scrollY >= viewPortHeight*3.6 && window.scrollY < viewPortHeight*3.7) {
-        return(this.defaultImageSrc = require('./../../../assets/tubetv_htl_transition.png'));
+        return(this.defaultImageSrc = require('./../../../assets/tubetv_htl_transition.webp'));
       }
       if (window.scrollY >= viewPortHeight*3.7) {
-        return(this.defaultImageSrc = require('./../../../assets/tubetv_kindergarten.png'));
+        return(this.defaultImageSrc = require('./../../../assets/tubetv_kindergarten.webp'));
       }
     }
   }
