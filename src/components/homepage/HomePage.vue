@@ -18,6 +18,7 @@
     <ProjectsOverview></ProjectsOverview>
   </section>
   <section class="sect-timer">
+    <h1 class="section-heading">TIME W/O INCIDENT</h1>
     <p>Ah du fragst dich was der Timer für einen Sinn macht (futur)?</p>
     <p>Der Timer steht für eine monatliche Challenge. Diese reicht von Netflix-Entzug, über jeden Tag Sport, bis zu NNN.
       Und du kannst live mitverfolgen, wie lange ich es bereits ohne Fehltritt schaffe.</p>
@@ -94,7 +95,7 @@ section {
   text-align: center;
 
   height: fit-content;
-  padding: 20px;
+  padding: 50px 0px;
 }
 
 .sect-toying {
