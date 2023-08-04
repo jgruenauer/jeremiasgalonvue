@@ -28,7 +28,7 @@
     <button>Sign up</button>
   </section>
   <section class="sect-toying">
-    <h2>"Coming Soon"</h2>
+    <h2>"Coming Maybe"</h2>
   </section>
   <section class="sect-contact">
     <h2>"Coming Never"</h2>
@@ -48,10 +48,6 @@ export default {
 </script>
 
 <style>
-section {
-  height: 100vh;
-}
-
 .sect-jeremias {
   /*
   background-image: url('./../../assets/ichviel.png');

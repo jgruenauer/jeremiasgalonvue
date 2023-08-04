@@ -5,7 +5,7 @@
                 <router-link class="menuTitle btn-3" to="/">Kontakt</router-link>
             </div>
             <div class="menuItem">
-                <router-link to="/"><img class="menuLogo" src="./../../assets/Signature_White.png"/></router-link>
+                <router-link to="/"><img class="menuLogo" src="./../../assets/SignVector.svg"/></router-link>
             </div>
             <div class="menuItem">
                 <router-link class="menuTitle btn-3" to="/blog">Blog</router-link>
@@ -56,6 +56,7 @@ export default{
 .menuLogo{
     align-self: center;
     height: 100px;
+    color: white;
 }
 .menuLogo:hover{
       height: 110px;

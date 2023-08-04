@@ -3,36 +3,46 @@
   <div class="sticky-scroll-container">
     <div class="left">
       <div class="fact-element">
-        <div>
+        <div class="fact-upper"></div>
+        <div class="fact-middle">
           <h2 class="fact-header">2023: Universität Buxtehude</h2>
-          <p class="fact-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sunt! Quaerat labore
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sunt! Quaerat labore
             assumenda, minus exercitationem consectetur molestias dolores delectus molestiae tenetur illum vitae
             voluptatibus, reprehenderit minima vero pariatur rerum ad.</p>
         </div>
+        <div class="fact-lower"></div>
       </div>
       <div class="fact-element">
-        <div>
+        <div class="fact-upper"></div>
+        <div class="fact-middle">
           <h2 class="fact-header">2022-2023: Zivildienst Rotes Kreuz</h2>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis natus nobis officiis aut optio, maiores
             asperiores soluta impedit illum explicabo eligendi consequuntur minima. Cupiditate temporibus eaque excepturi
             ad, quidem odit!</p>
         </div>
+        <div class="fact-lower"></div>
       </div>
       <div class="fact-element">
-        <div>
-          <h2 class="fact-header">2017-2022: HTL Grieskirchen</h2>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis natus nobis officiis aut optio, maiores
-            asperiores soluta impedit illum explicabo eligendi consequuntur minima. Cupiditate temporibus eaque excepturi
-            ad, quidem odit!</p>
+        <div class="fact-upper"></div>
+        <div class="fact-middle">
+          <h2 class="fact-header">2017-2022: HTL Grieskirchen Medizininformatik</h2>
+          <p>An der HTL lernt Jeremias das Programmieren. Dabei kommt er in Berührung mit Java, C#, 
+            Python, Webprogrammierung, diversen Frameworks, ... Erste Erfahrungen in der Arbeitswelt sammelt er in Form von
+            Praktika im Medizin- und Informatikbereich. Jeremias' Leistungen sind nach Oma immer - "fad".
+          </p>
         </div>
+        <div class="fact-lower"></div>
       </div>
       <div class="fact-element">
-        <div>
+        <div class="fact-upper"></div>
+        <div class="fact-middle">
           <h2 class="fact-header">2005-2008: Kindergarten Gangster</h2>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis natus nobis officiis aut optio, maiores
-            asperiores soluta impedit illum explicabo eligendi consequuntur minima. Cupiditate temporibus eaque excepturi
-            ad, quidem odit!</p>
+          <p>Am gefährlichsten war Jeremias wohl im Kindergarten. Die Bande und er regieren mit eiserner Faust.
+            Schnell ist die begehrte Burg im Spielgarten besetzt und Eindringlinge die es wagen, auch hier spielen zu wollen
+            bekommen die Kieselsteine rund um die Festung mit Präzision ins Gesicht geschleudert.
+          </p>
         </div>
+        <div class="fact-lower"></div>
       </div>
     </div>
     <div class="right" style="height: 100vh;">
@@ -97,8 +107,36 @@ export default {
   height: 100vh;
   text-align: right;
   display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 0 20px;
+}
+
+.fact-upper, .fact-lower{
+  flex: 1;
+  margin-left: 75%;
+  border-right: dashed 2px #b3b3b3;
+}
+
+.fact-upper{
+  position: relative;
+}
+
+.fact-upper::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #b3b3b3;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-radius: 10px;;
+}
+
+.fact-middle{
+  margin: 50px 0px;
 }
 
 .fact-header {
