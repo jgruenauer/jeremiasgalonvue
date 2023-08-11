@@ -1,6 +1,6 @@
 <template>
   <section class="sect-jeremias">
-    <TimerWI></TimerWI>
+    <TimerWI @go-section="goToSection"></TimerWI>
     <ImageScroller></ImageScroller>
   </section>
 
@@ -12,12 +12,13 @@
   </section>
   <section class="sect-projects">
     <h1 class="section-heading">EIGENE PROJEKTE</h1>
-    <p class="section-paragraph" style="margin-bottom: 50px;">Hier ist ein Auszug einiger Projekte, an denen ich mich in der Vergangenheit ausgelebt habe. Stöber gern ein
+    <p class="section-paragraph" style="margin-bottom: 50px;">Hier ist ein Auszug einiger Projekte, an denen ich mich in
+      der Vergangenheit ausgelebt habe. Stöber gern ein
       bisschen hinein, finde heraus welche Herausforderungen es zu bewältigen galt hat und wie das Endergebnis
       aussah!</p>
     <ProjectsOverview></ProjectsOverview>
   </section>
-  <section class="sect-timer">
+  <section class="sect-timer" ref="sectTimer">
     <h1 class="section-heading">TIME W/O INCIDENT</h1>
     <p>Ah du fragst dich was der Timer für einen Sinn macht (futur)?</p>
     <p>Der Timer steht für eine monatliche Challenge. Diese reicht von Netflix-Entzug, über jeden Tag Sport, bis zu NNN.
@@ -43,7 +44,18 @@ import ProjectsOverview from './sect-projects/ProjectsOverview.vue';
 
 export default {
   name: "HomePage",
-  components: { TimerWI, ImageScroller, FactsheetSection, ProjectsOverview }
+  components: { TimerWI, ImageScroller, FactsheetSection, ProjectsOverview },
+  methods: {
+    goToSection(sectionRef) {
+      var element = this.$refs[sectionRef];
+      var top = element.offsetTop;
+      window.scrollTo({
+        top: top,
+        left: 0,
+        behavior: 'smooth'
+      });
+    },
+  }
 }
 </script>
 

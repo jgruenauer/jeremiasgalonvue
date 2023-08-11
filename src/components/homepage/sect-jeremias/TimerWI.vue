@@ -2,7 +2,7 @@
     <div class="timer-wi">
         <div>
             <span>Time Without incident:</span>
-            <Icon class="info-icon" icon="fluent:info-16-filled" @mouseover="mouseOverIcon"/>
+            <Icon class="info-icon" icon="fluent:info-16-filled" @mouseover="mouseOverIcon" @click="$emit('go-section', 'sectTimer')"/>
         </div>
         <span class="timer-display">{{ formattedTime }}</span>
     </div>
@@ -59,11 +59,11 @@ export default {
             console.log("works");
         },
         async getTimeOI(){
-            const docSnap = await getDoc(doc(db, 'TimerValue', 'azklKmxYiUhA0Rpsakio'));
+            const docSnap = await getDoc(doc(db, 'Timer', 'values'));
 
             if (docSnap.exists()){
-                this.startTime = new Date(docSnap.data().TimeOI.seconds*1000);
-
+                var timerDate = docSnap.data().timerDate          
+                this.startTime = new Date(timerDate.year, timerDate.monthValue-1, timerDate.dayOfMonth, timerDate.hour, timerDate.minute, timerDate.second);
             }else{
                 console.log('Timer value does not exist!');
             }
