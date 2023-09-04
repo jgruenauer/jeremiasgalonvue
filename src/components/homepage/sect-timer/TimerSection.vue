@@ -44,6 +44,7 @@ export default {
 
 <style>
 .underlined{
+    color: black;
     position: relative;
   white-space: nowrap;
   &:after {
@@ -59,5 +60,10 @@ export default {
     background-repeat: round;
     background-position: 0em;
   }
+}
+
+.span{
+    color: black
+    fon
 }
 </style>
