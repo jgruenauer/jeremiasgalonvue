@@ -2,6 +2,7 @@
   <div class="project-card">
     <img class="project-image" :src="imageSrc" :alt="cardTitle"/>
     <div class="project-description">
+      <p> {{ cardTitle }}</p>
       <p>{{ cardDescription }}</p>
     </div>
   </div>
