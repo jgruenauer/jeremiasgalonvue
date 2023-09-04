@@ -1,7 +1,7 @@
 <template>
     <div class="timer-wi">
         <div>
-            <span>Time Without incident:</span>
+            <span class="timer-span">Time Without incident:</span>
             <Icon class="info-icon" icon="fluent:info-16-filled" @mouseover="mouseOverIcon" @click="$emit('go-section', 'sectTimer')"/>
         </div>
         <span class="timer-display">{{ formattedTime }}</span>
@@ -85,6 +85,11 @@ export default {
 </script>
   
 <style>
+.timer-span{
+    font-size: 20px;
+    color: white;
+}
+
 .timer-wi {
     position: relative;
     height: 30%;
@@ -94,13 +99,9 @@ export default {
     align-items: center;
 }
 
-span {
-    color: white;
-    font-size: 20px;
-}
-
 .timer-display {
     font-size: 80px;
+    color: white;
 }
 
 .info-icon{

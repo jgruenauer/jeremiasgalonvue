@@ -16,7 +16,7 @@ export default {
   <header><MenuBar></MenuBar></header>
   <router-view></router-view>
   <footer>
-    <span>(Fast) Taegliches Update - jeweils um 0:00!</span>
+    <span class="page-footer">(haha brauch kein Impressum. BOOM!)</span>
   </footer>
 </template>
 
@@ -31,17 +31,24 @@ footer{
   display: grid;
 }
 
-footer span{
+.page-footer{
   text-align: center;
   color: white;
-  font-size: 20px;
+  font-size: 10px;
+  font-family: 'Quicksand';
+  padding: 5px;
 }
 
 p{
   font-family: 'Quicksand';
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
+}
 
+.span{
+    font-family: 'Quicksand';
+    font-size: 16px;
+    font-weight: 400;
 }
 </style>
 

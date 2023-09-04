@@ -1,6 +1,20 @@
 <template>
-    <p>{{ startTime }}</p>
+    <p class="section-paragraph">
+        Du fragst dich was der Timer ganz oben zu bedeuten hat?<br>
+        Naja, das soll mich motivieren die Challenges die ich mir setze auch wirklich durchzuziehen.
+        Sei dies auf Netflix zu verzichten, ein Projekt zu beenden oder auch ein "Sober October".
+    </p>
+    <p class="timer-subtitle timer-name-title">Derzeitige Challenge:</p>
+    <p class="timer-name">{{ name }}</p>
     <p><span class='underlined'>{{ description }}</span></p>
+    <p>
+        <span class="timer-subtitle">Start: </span>
+        <span>{{ formattedStart }}</span>
+    </p>
+    <p>
+        <span class="timer-subtitle">Ende: </span>
+        <span>{{ formattedEnd }}</span>
+    </p>
 </template>
 
 <script>
@@ -18,6 +32,22 @@ export default {
     };
   },
   components: { },
+  computed: {
+        formattedStart() {
+            if (!this.startTime) {
+                return '- empty -';
+            }
+
+            return `${this.startTime.getFullYear()}/${this.padNumber(this.startTime.getMonth()+1)}/${this.padNumber(this.startTime.getDate())}`;
+        },
+        formattedEnd() {
+            if (!this.endTime) {
+                return '- empty -';
+            }
+
+            return `${this.endTime.getFullYear()}/${this.padNumber(this.endTime.getMonth()+1)}/${this.padNumber(this.endTime.getDate())}`;
+        }
+    },
   methods: {
     async getTimeOI(){
             const docSnap = await getDoc(doc(db, 'Timer', 'values'));
@@ -25,15 +55,18 @@ export default {
             if (docSnap.exists()){
                 var startDate = docSnap.data().startDate          
                 this.startTime = new Date(startDate.year, startDate.monthValue-1, startDate.dayOfMonth, startDate.hour, startDate.minute, startDate.second);
-           
+                
                 var endDate = docSnap.data().endDate          
-                this.startTime = new Date(endDate.year, endDate.monthValue-1, endDate.dayOfMonth, endDate.hour, endDate.minute, endDate.second);
+                this.endTime = new Date(endDate.year, endDate.monthValue-1, endDate.dayOfMonth, endDate.hour, endDate.minute, endDate.second);
            
                 this.name = docSnap.data().name
                 this.description = docSnap.data().description
             }else{
                 console.log('Timer value does not exist!');
             }
+        },
+        padNumber(number) {
+            return String(number).padStart(2, '0');
         }
   },
   created(){
@@ -43,6 +76,18 @@ export default {
 </script>
 
 <style>
+.timer-subtitle{
+    font-family: "Oswald";
+}
+
+.timer-name-title{
+    margin: 15px 0px 5px 0px;
+}
+
+.timer-name{
+    margin-top: 0px;
+}
+
 .underlined{
     color: black;
     position: relative;
@@ -60,10 +105,5 @@ export default {
     background-repeat: round;
     background-position: 0em;
   }
-}
-
-.span{
-    color: black
-    fon
 }
 </style>

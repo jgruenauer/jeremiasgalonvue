@@ -17,17 +17,17 @@ export default {
                 {
                     imageSrc: require('./../../../assets/project-diplomarbeit-1.png'),
                     cardTitle: 'Diplomarbeit',
-                    cardDescription: 'Description for Card 1',
+                    cardDescription: 'ein Ticketsystem',
                 },
                 {
                     imageSrc: require('./../../../assets/project-music.jpg'),
                     cardTitle: 'Eigene Musik',
-                    cardDescription: 'Description for Card 2',
+                    cardDescription: 'coming soon',
                 },
                 {
                     imageSrc: require('./../../../assets/project-protfolio.png'),
                     cardTitle: 'Portfolio Website',
-                    cardDescription: 'Description for Card 3',
+                    cardDescription: 'still ongoing',
                 },
                 // Add more cards here, up to 10 in total
             ],

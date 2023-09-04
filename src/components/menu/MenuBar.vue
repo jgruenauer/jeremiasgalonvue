@@ -2,7 +2,7 @@
     <div class="menuBar">  
         <div class="menuItembox">
             <div class="menuItem">
-                <router-link class="menuTitle btn-3" to="/">Kontakt</router-link>
+                <div class="menuTitle btn-3" @click="$emit('go-section', 'sectContact')">Kontakt</div>
             </div>
             <div class="menuItem">
                 <router-link to="/"><img class="menuLogo" src="./../../assets/SignVector.svg"/></router-link>
@@ -68,6 +68,8 @@ export default{
    transform: translate(0, -12px);
     color: white;
     padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .menuTitle:hover{

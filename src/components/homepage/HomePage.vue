@@ -20,13 +20,6 @@
   </section>
   <section class="sect-timer" ref="sectTimer">
     <h1 class="section-heading">TIME ohne INCIDENT</h1>
-    <p>Ah du fragst dich was der Timer für einen Sinn macht (futur)?</p>
-    <p>Der Timer steht für eine monatliche Challenge. Diese reicht von Netflix-Entzug, über jeden Tag Sport, bis zu NNN.
-      Und du kannst live mitverfolgen, wie lange ich es bereits ohne Fehltritt schaffe.</p>
-    <img src="./red-button.webp" style="height: 100px;" />
-    <p>Coming "soon"</p>
-    <p>Nimm an der Challenge Teil, besieg mich und zeig der Welt wie lange du dabei ist.</p>
-    <button>Sign up</button>
     <TimerSection></TimerSection>
   </section>
   <section class="sect-toying">
@@ -103,6 +96,8 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 
   height: fit-content;
   padding: 50px 0px;
