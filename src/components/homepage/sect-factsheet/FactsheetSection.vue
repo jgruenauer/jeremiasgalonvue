@@ -5,10 +5,8 @@
       <div class="fact-element">
         <div class="fact-upper"></div>
         <div class="fact-middle">
-          <h2 class="fact-header">2023: Universität Buxtehude</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sunt! Quaerat labore
-            assumenda, minus exercitationem consectetur molestias dolores delectus molestiae tenetur illum vitae
-            voluptatibus, reprehenderit minima vero pariatur rerum ad.</p>
+          <h2 class="fact-header">2023: Universität Regensburg</h2>
+          <p>Jeremias glaubt es selber noch nicht so wirklich, aber er studiert Medizin.</p>
         </div>
         <div class="fact-lower"></div>
       </div>
@@ -16,9 +14,10 @@
         <div class="fact-upper"></div>
         <div class="fact-middle">
           <h2 class="fact-header">2022-2023: Zivildienst Rotes Kreuz</h2>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis natus nobis officiis aut optio, maiores
-            asperiores soluta impedit illum explicabo eligendi consequuntur minima. Cupiditate temporibus eaque excepturi
-            ad, quidem odit!</p>
+          <p>Im Rahmen des österreichischen Zivildienstes meldet sich Jeremias beim Roten Kreuz. Er wird zum Sanitäter ausgebildet - zwei
+            Monate Theorie und Praxis - und arbeitet anschließend als vollwärtige Arbeitskraft 48h die Woche. Hier sammelt er einige Erfahrungen
+            mit gesundheitlichen Extremsituationen, wird professioneller Seniorenunterhalter und knüpft neue Kontakte.
+          </p>
         </div>
         <div class="fact-lower"></div>
       </div>
@@ -38,7 +37,7 @@
         <div class="fact-middle">
           <h2 class="fact-header">2005-2008: Kindergarten Gangster</h2>
           <p>Am gefährlichsten war Jeremias wohl im Kindergarten. Die Bande und er regieren mit eiserner Faust.
-            Schnell ist die begehrte Burg im Spielgarten besetzt und Eindringlinge die es wagen, auch hier spielen zu wollen
+            Schnell ist die begehrte Burg im Spielgarten besetzt und Eindringlinge die es wagen auch hier spielen zu wollen,
             bekommen die Kieselsteine rund um die Festung mit Präzision ins Gesicht geschleudert.
           </p>
         </div>
@@ -137,6 +136,7 @@ export default {
 
 .fact-middle{
   margin: 50px 0px;
+  width: 100%;
 }
 
 .fact-header {

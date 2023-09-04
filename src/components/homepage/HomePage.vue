@@ -19,7 +19,7 @@
     <ProjectsOverview></ProjectsOverview>
   </section>
   <section class="sect-timer" ref="sectTimer">
-    <h1 class="section-heading">TIME W/O INCIDENT</h1>
+    <h1 class="section-heading">TIME ohne INCIDENT</h1>
     <p>Ah du fragst dich was der Timer für einen Sinn macht (futur)?</p>
     <p>Der Timer steht für eine monatliche Challenge. Diese reicht von Netflix-Entzug, über jeden Tag Sport, bis zu NNN.
       Und du kannst live mitverfolgen, wie lange ich es bereits ohne Fehltritt schaffe.</p>
@@ -27,6 +27,7 @@
     <p>Coming "soon"</p>
     <p>Nimm an der Challenge Teil, besieg mich und zeig der Welt wie lange du dabei ist.</p>
     <button>Sign up</button>
+    <TimerSection></TimerSection>
   </section>
   <section class="sect-toying">
     <h2>"Coming Maybe"</h2>
@@ -41,10 +42,11 @@ import TimerWI from './sect-jeremias/TimerWI.vue';
 import ImageScroller from './sect-jeremias/ImageScroller.vue';
 import FactsheetSection from './sect-factsheet/FactsheetSection.vue';
 import ProjectsOverview from './sect-projects/ProjectsOverview.vue';
+import TimerSection from './sect-timer/TimerSection.vue';
 
 export default {
   name: "HomePage",
-  components: { TimerWI, ImageScroller, FactsheetSection, ProjectsOverview },
+  components: { TimerWI, ImageScroller, FactsheetSection, ProjectsOverview, TimerSection },
   methods: {
     goToSection(sectionRef) {
       var element = this.$refs[sectionRef];

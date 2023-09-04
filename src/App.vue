@@ -26,6 +26,7 @@ export default {
   
   font-family: 'Oswald';
 }
+
 footer{
   display: grid;
 }
@@ -34,6 +35,13 @@ footer span{
   text-align: center;
   color: white;
   font-size: 20px;
+}
+
+p{
+  font-family: 'Quicksand';
+  font-size: 16px;
+  font-weight: 600;
+
 }
 </style>
 

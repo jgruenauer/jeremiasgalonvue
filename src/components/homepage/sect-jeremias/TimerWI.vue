@@ -106,5 +106,6 @@ span {
 .info-icon{
     position: absolute;
     color: white;
+    cursor: pointer;
 }
 </style>
